@@ -1,0 +1,688 @@
+do run
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=213.652928, duration=0.00019383430481
+script duration name:unknown120_60 seconds:214.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=2.78949737549e-05
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=5.79357147217e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=8.70227813721e-05
+executed snippet estimated_duration=0.0, duration=0.00265192985535
+script duration name:co2 seconds:0.0
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000143051147461
+executed snippet estimated_duration=4.0, duration=0.00112915039062
+Script duration 214.0
+Run total estimated duration= 215.000
+run duration: 0:03:35
+doing event level: 2
+23:07:18 -- Setting default integration. t=1.048576
+setting integration time = 1.048576
+SetIntegrationTime 1.048576 ===>> OK
+----------------- start -----------------
+**************** Experiment Type: Ar/Ar, Ar/Ar
+create new session 5017557616
+close session 5017557616
+$$$$$ Clearing conditionals
+adding conditionals 
+Add queue conditionals
+add default conditionals
+adding default conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+Start automated run 65277-02AE
+loading script "jan_unknown120_60.py"
+loading script "jan_pump_ms.py"
+loading script "jan_co2.py"
+loading script "jan_pump_extraction_line.py"
+%%%%%%%%%%%%%%%%%% setting automated run 65277-02AE
+No value "sensitivity_multiplier" in metadata
+$$$$$$$$$$$$$$$ auto_save_detector_ic=False
+============================= Pre Extraction Check =============================
+loading queue conditionals pre_run_terminations
+loading system conditionals pre_run_terminations
+loading conditionals from /Users/jan/PychronDev/setupfiles/spectrometer/default_conditionals.yaml
+23:07:18 -- ******* Pre Extraction Check *******
+Get a measurement from the spectrometer
+Pre Extraction Termination data. keys=H2,H1,AX,L1,L2,CDD, signals=-0.24016,0.00998,0.00685,-0.03472,-0.03210,0.00000
+23:07:18 -- testing system defined conditionals
+Checking default pre extraction terminations n=2
+testing CDD
+evaluate ot="CDD.inactive" t="CDD", ctx="{'CDD': False}"
+GetDeflection CDD ===>> 50
+testing CDD==2000
+evaluate ot="CDD.deflection==2000" t="CDD==2000", ctx="{'CDD': 50.0}"
+23:07:18 -- ******* Pre Extraction Check Passed *******
+=================================================================================
+23:07:18 -- stopping status monitor
+stop 4997392048
+Status monitor stopped
+Status monitor finished
+23:07:20 -- starting status monitor
+start 4997392048
+StatusMonitor period=1. Frequencies(state=2, checksum=3, lock=5, owner=5)
+start extraction
+do extraction
+Analysis started at 23:07:21.862133
+Extraction Started jan_co2.py
+23:07:21 -- ******* Extraction Started jan_co2.py *******
+state changed from not run to extraction
+DO EXTRACTION <pychron.extraction_line.pyscript_runner.RemotePyScriptRunner object at 0x12cfd1590>
+testing...
+no interpolation path defined
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=5.19752502441e-05
+calculate duration
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=8.70227813721e-05
+executed snippet estimated_duration=100.0, duration=0.00278186798096
+Jan CO2 laser analysis
+doing GOSUB
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=4.19616699219e-05
+Waiting for CO2 access
+wait ('FelixCO2Flag', 0) {}
+waiting for FelixCO2Flag = 0
+Read FelixCO2Flag ===>> 0
+finished waiting
+CO2 free
+wait ('CO2PumpTimeFlag', 0) {}
+waiting for CO2PumpTimeFlag = 0
+Read CO2PumpTimeFlag ===>> 0
+finished waiting
+acquire ('JanCO2Flag',) {'clear': True}
+acquire JanCO2Flag
+Set JanCO2Flag 1 ===>> OK
+JanCO2Flag acquired
+set extraction state False (0.75, 'red', 1.5)
+CO2 acquired
+executed snippet estimated_duration=0, duration=0.0194509029388
+WaitForCO2Access.py completed successfully
+gosub finished
+doing GOSUB
+testing...
+no interpolation path defined
+executed snippet estimated_duration=0, duration=8.10623168945e-05
+Prepare for CO2 analysis
+close () {'description': 'Jan Inlet'}
+close name=--- desc=Jan Inlet
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel False
+Close R ===>> OK
+GetIndicatorState R ===>> False
+change switch state (True, True)
+update switch state R False args=() kw={} ncanvase=10
+23:07:22 -- CLOSE  VALVE-R (Jan Inlet)
+-------------------------- close None (Jan Inlet) result=[(True, True)]
+action=close, ok=True, locked=[False]
+open () {'description': 'Jan Ion Pump'}
+open name=--- desc=Jan Ion Pump
+checking ownership. requestor=129.138.12.150
+check software interlocks O
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open O ===>> OK
+GetIndicatorState O ===>> OK
+change switch state (True, True)
+update switch state O True args=() kw={} ncanvase=10
+23:07:22 -- OPEN   VALVE-O (Jan Ion Pump)
+-------------------------- open None (Jan Ion Pump) result=[(True, True)]
+action=open, ok=True, locked=[False]
+close () {'description': 'Microbone to Minibone'}
+close name=--- desc=Microbone to Minibone
+checking ownership. requestor=129.138.12.150
+check software interlocks L
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel False
+Close L ===>> OK
+GetIndicatorState L ===>> False
+change switch state (True, True)
+update switch state L False args=() kw={} ncanvase=10
+23:07:23 -- CLOSE  VALVE-L (Microbone to Minibone)
+-------------------------- close None (Microbone to Minibone) result=[(True, True)]
+action=close, ok=True, locked=[False]
+open () {'description': 'Microbone to Turbo'}
+open name=--- desc=Microbone to Turbo
+checking ownership. requestor=129.138.12.150
+check software interlocks U
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open U ===>> OK
+GetIndicatorState U ===>> OK
+change switch state (True, True)
+update switch state U True args=() kw={} ncanvase=10
+23:07:23 -- OPEN   VALVE-U (Microbone to Turbo)
+-------------------------- open None (Microbone to Turbo) result=[(True, True)]
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Inlet Pipette'}
+open name=--- desc=Microbone to Inlet Pipette
+checking ownership. requestor=129.138.12.150
+check software interlocks S
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open S ===>> OK
+GetIndicatorState S ===>> OK
+change switch state (True, True)
+update switch state S True args=() kw={} ncanvase=10
+23:07:24 -- OPEN   VALVE-S (Microbone to Inlet Pipette)
+-------------------------- open None (Microbone to Inlet Pipette) result=[(True, True)]
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter D-50'}
+open name=--- desc=Microbone to Getter D-50
+checking ownership. requestor=129.138.12.150
+check software interlocks K
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open K ===>> OK
+GetIndicatorState K ===>> OK
+change switch state (True, True)
+update switch state K True args=() kw={} ncanvase=10
+23:07:25 -- OPEN   VALVE-K (Microbone to Getter D-50)
+-------------------------- open None (Microbone to Getter D-50) result=[(True, True)]
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to Getter NP-10'}
+open name=--- desc=Microbone to Getter NP-10
+checking ownership. requestor=129.138.12.150
+check software interlocks M
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open M ===>> OK
+GetIndicatorState M ===>> OK
+change switch state (True, True)
+update switch state M True args=() kw={} ncanvase=10
+23:07:25 -- OPEN   VALVE-M (Microbone to Getter NP-10)
+-------------------------- open None (Microbone to Getter NP-10) result=[(True, True)]
+action=open, ok=True, locked=[False]
+close () {'description': 'CO2 Laser to Felix'}
+close name=--- desc=CO2 Laser to Felix
+checking ownership. requestor=129.138.12.150
+check software interlocks F
+interlocks []
+actuate state mode=None-script, software_lock=True
+VALVE-F(CO2 Laser to Felix) software locked
+change switch state (True, False)
+-------------------------- close None (CO2 Laser to Felix) result=[(True, False)]
+action=close, ok=True, locked=[True]
+open () {'description': 'CO2 Laser to Jan'}
+open name=--- desc=CO2 Laser to Jan
+checking ownership. requestor=129.138.12.150
+check software interlocks A
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open A ===>> OK
+GetIndicatorState A ===>> OK
+change switch state (True, True)
+update switch state A True args=() kw={} ncanvase=10
+23:07:26 -- OPEN   VALVE-A (CO2 Laser to Jan)
+-------------------------- open None (CO2 Laser to Jan) result=[(True, True)]
+action=open, ok=True, locked=[False]
+open () {'description': 'Microbone to CO2 Laser'}
+open name=--- desc=Microbone to CO2 Laser
+checking ownership. requestor=129.138.12.150
+check software interlocks T
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel False
+Open T ===>> OK
+GetIndicatorState T ===>> OK
+change switch state (True, True)
+update switch state T True args=() kw={} ncanvase=10
+23:07:26 -- OPEN   VALVE-T (Microbone to CO2 Laser)
+-------------------------- open None (Microbone to CO2 Laser) result=[(True, True)]
+action=open, ok=True, locked=[False]
+executed snippet estimated_duration=0, duration=5.24941802025
+PrepareForCO2Analysis.py completed successfully
+gosub finished
+set_motor ('beam', '1.2') {}
+setting motor "beam" to 1.2
+set motor beam to 1.2
+SetMotor beam,1.2 ===>> OK
+GetMotorMoving beam ===>> False
+GetMotorMoving beam ===>> False
+Block completed
+move_to_position ('114',) {'autocenter': True}
+FusionsCO2 move to position 114
+sending GoToHole 114,True
+GoToHole 114,True ===>> OK
+GetDriveMoving ===>> False
+GetDriveMoving ===>> False
+Block completed
+GetAutoCorrecting ===>> False
+GetAutoCorrecting ===>> False
+Block completed
+update position
+GetPosition ===>> 5.98170,0.00000,1.00000
+got position (5.9817, 0.0, 1.0)
+move to position succeeded
+sleep (5,) {}
+SLEEP 5.0
+block started
+WaitControl setup for 5.0  
+Join finished
+block finished. duration 5.06239891052
+close () {'description': 'Microbone to Turbo'}
+close name=--- desc=Microbone to Turbo
+checking ownership. requestor=129.138.12.150
+check software interlocks U
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel True
+Close U ===>> OK
+GetIndicatorState U ===>> False
+change switch state (True, True)
+update switch state U False args=() kw={} ncanvase=10
+23:07:35 -- CLOSE  VALVE-U (Microbone to Turbo)
+-------------------------- close None (Microbone to Turbo) result=[(True, True)]
+action=close, ok=True, locked=[False]
+enable laser
+enable () {}
+set extraction state FusionsCO2 Enabled (False, 'red', 1.5)
+enabling laser
+Enable ===>> OK
+begin interval
+BEGIN INTERVAL Interval 1 waiting for 30.0
+set extract to 3.0
+block started
+WaitControl setup for 30.0  
+extract (3.0,) {}
+GetPosition ===>> 5.98170,0.00000,1.00000
+set extraction state FusionsCO2 ON! 3.0(watts) (0.75, 'red', 1.5)
+extract sample to 3.0 (watts)
+set laser output
+SetLaserOutput 3.0,watts ===>> OK
+COMPLETE INTERVAL waiting for Interval 1 to complete
+Join finished
+block finished. duration 30.1734850407
+Interval 1 finished
+end_extract () {}
+ending extraction. set laser power to 0
+set laser power 0
+SetLaserPower 0 ===>> OK
+disable () {}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% disable
+set extraction state False (0.75, 'red', 1.5)
+disabling laser
+Disable ===>> OK
+sleep (30.0,) {}
+SLEEP 30.0
+block started
+WaitControl setup for 30.0  
+Join finished
+block finished. duration 30.1202719212
+executed snippet estimated_duration=195.0, duration=74.7663040161
+jan_co2.py completed successfully
+GetAchievedOutput ===>> No Response
+Requested Output= 0.000
+Achieved Output=  0.000
+GetResponseBlob ===>> No Response
+GetOutputBlob ===>> No Response
+persistence save...
+persistence save - db
+AutomatedRunPersister post_extraction_save deprecated
+persistence save - dvc
+no extraction position for 114
+Extraction Finished
+23:08:36 -- ******* Extraction Finished *******
+no overlap. not waiting for min ms pumptime
+23:08:36 -- Sending spectrometer configuration
+======== Sending configuration ========
+SetDeflection CDD,50.0 ===>> OK
+SetDeflection H2,0.0 ===>> OK
+SetDeflection H1,0.0 ===>> OK
+SetDeflection L2,825.0 ===>> OK
+SetDeflection L1,400.0 ===>> OK
+SetDeflection AX,190.0 ===>> OK
+SetZFocus 74.64 ===>> OK
+SetZSymmetry -50.72 ===>> OK
+SetExtractionLens 26.13 ===>> OK
+SetIonRepeller -3.81 ===>> OK
+SetElectronEnergy 75.08 ===>> OK
+SetYSymmetry -2.81 ===>> OK
+SetIonCounterVoltage 1590.0 ===>> OK
+send trap current 200.0
+GetParameter Trap Current Readback ===>> 198.482695477019
+SetParameter Trap Current Set,200.0 ===>> OK
+updating mftable name mftable
+Using mftable located at /Users/jan/PychronDev/setupfiles/spectrometer/mftables/mftable.csv
+============ MFtable ===========
+Isotope  H2     H1     AX     L1     L2     CDD    
+Ar40     5.8247 5.8781 5.9913 6.1646 6.2297 6.3928
+Ar39     5.7239 5.7704 5.8838 6.0506 6.1148 6.2793
+Ar36     5.4014 5.4394 5.5471 5.7095 5.7698 5.9304
+================================
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+get initial guess parabolic
+======== Configuration Finished ========
+GetYSymmetry ===>> -2.81
+GetZSymmetry ===>> -50.72
+GetParameter Trap Current Readback ===>> 198.258926936459
+GetHighVoltage ===>> 4499.94659342336
+start measurement
+do measurement
+L#=65277 analysis type=unknown
+Measurement Started jan_unknown120_60.py
+23:08:36 -- ******* Measurement Started jan_unknown120_60.py *******
+state changed from extraction to measurement
+setting spec, defl, and gains
+GetExtractionLens ===>> 26.13
+GetYSymmetry ===>> -2.81
+GetZSymmetry ===>> -50.72
+GetZFocus ===>> 74.64
+GetDeflection H2 ===>> 0
+GetDeflection H1 ===>> 0
+GetDeflection AX ===>> 190
+GetDeflection L1 ===>> 400
+GetDeflection L2 ===>> 825
+GetDeflection CDD ===>> 50
+GetGain H2 ===>> 0.0113
+GetGain H1 ===>> 0.99
+GetGain AX ===>> 0.097049
+GetGain L1 ===>> 0.010355
+GetGain L2 ===>> 0.095649
+GetGain CDD ===>> 0
+pre measurement save
+New frame /Users/jan/PychronDev/data/isotopes/19/673443-8bb5-44b3-80c3-66ebbe1fae55.h5
+flush and close file /Users/jan/PychronDev/data/isotopes/19/673443-8bb5-44b3-80c3-66ebbe1fae55.h5
+testing...
+no interpolation path defined
+executed snippet estimated_duration=226.132928, duration=0.000164031982422
+unknown measurement script
+activate_detectors ('H2', 'H1', 'AX', 'L1', 'L2', 'CDD') {}
+activate detectors
+*************** Set Analysis View Ar/Ar
+create graphs
+============ Exception ==============
+Traceback (most recent call last):
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/qt4/toolkit.py", line 89, in event
+    self._handler(*self._args, **self._kwds)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/editor.py", line 366, in _update_editor
+    self.update_editor()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/qt4/instance_editor.py", line 319, in update_editor
+    self.resynch_editor()
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/qt4/instance_editor.py", line 380, in resynch_editor
+    self.factory.id )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/view.py", line 433, in ui
+    ui.ui( parent, kind )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/ui.py", line 221, in ui
+    self.rebuild( self, parent )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/qt4/toolkit.py", line 140, in ui_subpanel
+    ui_panel.ui_subpanel( ui, parent )
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/qt4/ui_panel.py", line 79, in ui_subpanel
+    _ui_panel_for(ui, parent, True)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/qt4/ui_panel.py", line 85, in _ui_panel_for
+    ui.control = control = _Panel(ui, parent, is_subpanel).control
+File "/Users/jan/Programming/git/pychron_dev/launchers/helpers.py", line 142, in __init__
+    self.control = panel(ui)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/qt4/ui_panel.py", line 231, in panel
+    panel = _GroupPanel(content[0], ui).control
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/qt4/ui_panel.py", line 541, in __init__
+    _fill_panel(sub, content, self.ui, self._add_page_item)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/qt4/ui_panel.py", line 296, in _fill_panel
+    item_handler(item, layout)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/qt4/ui_panel.py", line 637, in _add_page_item
+    self._add_items([item], layout)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/qt4/ui_panel.py", line 840, in _add_items
+    editor.prepare(inner)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/editor.py", line 156, in prepare
+    self.init( parent )
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 559, in init
+    control = self.control = self.widget_factory(self, layout=layout)
+File "/Users/jan/Programming/git/pychron_dev/pychron/core/ui/qt/tabular_editor.py", line 151, in __init__
+    super(_TableView, self).__init__(editor, *args, **kw)
+File "/Users/jan/anaconda/lib/python2.7/site-packages/traitsui/qt4/tabular_editor.py", line 592, in __init__
+    self.setModel(editor.model)
+AttributeError: 'PySide.QtGui.QTabBar' object has no attribute 'updateGeometries'
+============ End Exception ==========
+clearing graphs
+clear isotope group
+setting isotope det=H2, iso=PM41
+setting isotope det=H1, iso=Ar40
+setting isotope det=AX, iso=Ar39
+setting isotope det=L1, iso=Ar38
+setting isotope det=L2, iso=Ar37
+setting isotope det=CDD, iso=Ar36
+setting previous blanks
+ - setting Ar40 blank 0.406+/-0.020
+ - setting Ar36 blank 0.00383+/-0.00017
+ - setting Ar37 blank 0.041+/-0.005
+ - setting Ar38 blank 0.0048+/-0.0021
+ - setting PM41 blank 0.01+/-0.06
+ - setting Ar39 blank 0.002+/-0.008
+load analysis view
+position_magnet ('Ar40',) {'detector': 'H1'}
+detector Detector(H1)
+POSITION Ar40 H1
+setting detector H2 to PM41 (40.9624)
+setting detector H1 to Ar40 (39.9624)
+setting detector AX to Ar39 (38.9624)
+setting detector L1 to Ar38 (37.9624)
+setting detector L2 to Ar37 (36.9624)
+setting detector CDD to Ar36 (35.9624)
+Mapping mass to dac mass func: "parabolic"
+H1 map mass coeffs = [-0.00063987  0.15840543  0.56975999]
+H1 map mass to dac 39.9624 >> 5.87815
+GetDeflection H1 ===>> 0
+GetHighVoltage ===>> 4499.94659342336
+positioning Ar40 (5.87811538413) on H1
+setting magnet DAC
+current  : 5.238775
+requested: 5.878115
+Delta Dac: 0.639340
+Checking detector protection. dv=0.63934
+Checking detector "CDD". Protection Threshold: 0.1 (V)
+ProtectDetector CDD,On ===>> OK
+GetDeflection CDD ===>> 2000
+Protected = 2000
+SetMagnetDAC 5.87811538413 ===>> OK
+Magnet settling time: 0.500
+Magnet settling complete
+Wait for magnet to stop moving
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> True
+GetMagnetMoving ===>> False
+Magnet move complete
+Unprotect detectors
+ProtectDetector CDD,Off ===>> OK
+GetDeflection CDD ===>> 50
+set_dac. change=True
+equilibrate () {'delay': 3, 'inlet': 'R', 'outlet': 'O', 'eqtime': 12.0}
+Equilibration Started
+23:08:41 -- ******* Equilibration Started *******
+checking ownership. requestor=129.138.12.150
+check software interlocks O
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel True
+Close O ===>> OK
+GetIndicatorState O ===>> False
+change switch state (True, True)
+update switch state O False args=() kw={} ncanvase=10
+23:08:41 -- CLOSE  VALVE-O (Jan Ion Pump)
+waiting 3s before opening inlet value ('R',)
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script open_channel True
+Open R ===>> OK
+GetIndicatorState R ===>> OK
+change switch state (True, True)
+update switch state R True args=() kw={} ncanvase=10
+23:08:45 -- OPEN   VALVE-R (Jan Inlet)
+set_time_zero () {}
+sniff (12.0,) {}
+py_sniff
+equilibrating for 12.0sec
+build tables- sniff [Detector(H2), Detector(H1), Detector(AX), Detector(L1), Detector(L2), Detector(CDD)]
+add group /sniff/PM41 (Group) '' table H2
+add group /sniff/Ar40 (Group) '' table H1
+add group /sniff/Ar39 (Group) '' table AX
+add group /sniff/Ar38 (Group) '' table L1
+add group /sniff/Ar37 (Group) '' table L2
+add group /sniff/Ar36 (Group) '' table CDD
+flush and close file /Users/jan/PychronDev/data/isotopes/19/673443-8bb5-44b3-80c3-66ebbe1fae55.h5
+measuring sniff. ncounts=12.0
+starting measurement
+flush and close file /Users/jan/PychronDev/data/isotopes/19/673443-8bb5-44b3-80c3-66ebbe1fae55.h5
+_execute: Traceback (most recent call last):
+  File "/Users/jan/Programming/git/pychron_dev/pychron/pyscripts/pyscript.py", line 360, in execute_snippet
+    func(*argv)
+  File "<string>", line 65, in main
+  File "/Users/jan/Programming/git/pychron_dev/pychron/pyscripts/pyscript.py", line 135, in decorator
+    return func(obj, *args, **kw)
+  File "/Users/jan/Programming/git/pychron_dev/pychron/pyscripts/measurement_pyscript.py", line 169, in sniff
+    series=self._series_count, block=block):
+  File "/Users/jan/Programming/git/pychron_dev/pychron/pyscripts/measurement_pyscript.py", line 883, in _automated_run_call
+    return func(*args, **kw)
+  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/automated_run.py", line 384, in py_sniff
+    return self._sniff(ncounts, starttime, starttime_offset, series)
+  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/automated_run.py", line 2213, in _sniff
+    check_conditionals, sc)
+  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/automated_run.py", line 2274, in _measure
+    m.measure()
+  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 114, in measure
+    self._measure(evt)
+  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 152, in _measure
+    if not self._iter(i):
+  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 179, in _iter
+    if not self._iter_hook(i):
+  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/multi_collector.py", line 37, in _iter_hook
+    return self._iteration(i)
+  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 215, in _iteration
+    self._plot_data(i, x, k, s)
+  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 379, in _plot_data
+    self._plot_data_(i, x, keys, signals)
+  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 299, in _plot_data_
+    self._set_plot_data(cnt, det.isotope, det.name, x, signal)
+  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 362, in _set_plot_data
+    update_graph(graph, pid, fit, self.series_idx, self.fit_series_idx)
+  File "/Users/jan/Programming/git/pychron_dev/pychron/experiment/automated_run/data_collector.py", line 356, in update_graph
+    ypadding='0.1')
+  File "/Users/jan/Programming/git/pychron_dev/pychron/graph/graph.py", line 974, in add_datum
+    names = self.series[plotid][series]
+TypeError: list indices must be integers, not NoneType
+
+Post Equilibration Started jan_pump_extraction_line.py
+Post Measurement Started jan_pump_ms.py
+23:08:45 -- ******* Post Equilibration Started jan_pump_extraction_line.py *******
+23:08:45 -- ******* Post Measurement Started jan_pump_ms.py *******
+testing...
+testing...
+no interpolation path defined
+no interpolation path defined
+executed snippet estimated_duration=0, duration=2.69412994385e-05
+calculate duration
+Pumping spectrometer
+testing...
+no interpolation path defined
+executed snippet estimated_duration=4.0, duration=0.000143051147461
+open () {'name': 'O'}
+executed snippet estimated_duration=4.0, duration=0.00228691101074
+open name=O desc=---
+Pump after analysis
+doing GOSUB
+checking ownership. requestor=129.138.12.150
+check software interlocks O
+testing...
+interlocks []
+no interpolation path defined
+actuate state mode=None-script, software_lock=False
+executed snippet estimated_duration=4.0, duration=0.000141143798828
+doing actuation None-script open_channel True
+Pump Microbone
+close () {'description': 'Jan Inlet'}
+close name=--- desc=Jan Inlet
+checking ownership. requestor=129.138.12.150
+check software interlocks R
+interlocks []
+actuate state mode=None-script, software_lock=False
+doing actuation None-script close_channel True
+Open O ===>> OK
+Close R ===>> OK
+GetIndicatorState O ===>> OK
+change switch state (True, True)
+update switch state O True args=() kw={} ncanvase=10
+set states for children of R. state=False
+handle state [('R', False)]
+update switch state R False args=() kw={'refresh': False} ncanvase=10
+23:08:46 -- OPEN   VALVE-O (Jan Ion Pump)
+-------------------------- open O () result=[(True, True)]
+GetIndicatorState R ===>> False
+change switch state (True, True)
+update switch state R False args=() kw={} ncanvase=10
+refresh_canvas_needed fired
+23:08:46 -- CLOSE  VALVE-R (Jan Inlet)
+-------------------------- close None (Jan Inlet) result=[(True, True)]
+action=open, ok=True, locked=[False]
+executed snippet estimated_duration=0, duration=0.72226691246
+jan_pump_ms.py completed successfully
+setting _ms_pumptime
+Post Measurement Finished
+23:08:46 -- ******* Post Measurement Finished *******
+----------------- finish -----------------
+state changed from measurement to failed
+----------------- stop -----------------
+Measurement Finished unsuccessfully. Aborted=False
+23:08:46 -- ******* Measurement Finished unsuccessfully. Aborted=False *******
+failed execution step Measurement Failed
+measurement did not complete successfully
+23:08:46 -- Automated run 65277-02AE failed duration: 87.806 s
+----------------- finish -----------------
+----------------- stop -----------------
+finish run. runs completed=19
+write rem/ex queues
+/Users/jan/PychronDev/experiments/rem/Load1798.rem.txt
+/Users/jan/PychronDev/experiments/rem/Load1798.ex.txt
+doing event level: 3
